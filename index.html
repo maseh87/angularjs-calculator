@@ -7,20 +7,20 @@
 </head>
 <body ng-controller='myController'>
   <div class='calculatorButtons'>
-    <button type="button" class="btn btn-primary" ng-click="numbers(7)">7</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(8)">8</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(9)">9</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(4)">4</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(5)">5</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(6)">6</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(1)">1</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(2)">2</button>
-    <button type="button" class="btn btn-primary" ng-click="numbers(3)">3</button>
-    <button type="button" class="btn btn-primary">-</button>
-    <button type="button" class="btn btn-primary">*</button>
-    <button type="button" class="btn btn-primary">/</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(7)">7</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(8)">8</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(9)">9</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(4)">4</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(5)">5</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(6)">6</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(1)">1</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(2)">2</button>
+    <button type="button" class="btn btn-primary" ng-click="updateOutput(3)">3</button>
+    <button type="button" class="btn btn-primary" ng-click="subtract()">-</button>
+    <!-- <button type="button" class="btn btn-primary">*</button> -->
+    <!-- <button type="button" class="btn btn-primary">/</button> -->
     <button type="button" class="btn btn-primary" ng-click="add()">+</button>
-    <button type="button" class="btn btn-primary">=</button>
+    <button type="button" class="btn btn-primary" ng-click="calculate()">=</button>
     <button type="button" class="btn btn-primary" ng-click="clear()">Clear</button>
   </div>
   <p>{{ output }}</p>
