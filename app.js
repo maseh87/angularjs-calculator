@@ -1,10 +1,15 @@
-angular.module('myApp', [])
+angular.module('myApp', [
+  'fx.animations',
+  'ngAnimate'
+  ])
 
 
 
 
 .controller('myController', function($scope) {
-  $scope.output = "0";
+  $scope.output = '0';
+  $scope.nums = [];
+  $scope.show = false;
   $scope.newNumber = true;
   $scope.pendingOperation = null;
   $scope.operationToken = "";
@@ -17,11 +22,14 @@ angular.module('myApp', [])
   var SUBTRACT_TOKEN = "-";
 
   $scope.updateOutput = function (btn) {
-      if ($scope.output == "0" || $scope.newNumber) {
-          $scope.output = btn;
-          $scope.newNumber = false;
+      if ($scope.output === "0" || $scope.newNumber) {
+        $scope.show = true;
+        $scope.output = btn;
+        $scope.nums.push(btn);
+        $scope.newNumber = false;
       } else {
-          $scope.output += String(btn);
+        $scope.show = true;
+        $scope.output += String(btn);
       }
       $scope.pendingValue = toNumber($scope.output);
   };
@@ -128,8 +136,8 @@ angular.module('myApp', [])
 
   $scope.keypress = function($event) {
     var keyPressed = String.fromCharCode($event.charCode);
-    console.log($event);
-    if(parseInt(keyPressed)) {
+    // console.log($event);
+    if(parseInt(keyPressed) || keyPressed === '0') {
       $scope.updateOutput(keyPressed);
     }
     if(keyPressed === '+') {
@@ -138,7 +146,7 @@ angular.module('myApp', [])
       $scope.subtract();
     } else if( $event.keyIdentifier === 'Enter') {
       $scope.calculate();
-    } else if( $event.keyIdentifier === 'Delete') {
+    } else if( $event.keyIdentifier === 'U+0043') {
       $scope.clear();
     }
   };

@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "angular": "~1.2.12",
-    "bootstrap-css-only": "~3.1.1"
+    "bootstrap-css-only": "~3.1.1",
+    "ng-Fx": "~0.3.3"
   }
 }

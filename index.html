@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
 <head>
-  <title></title>
+  <title>My Calculator</title>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css-only/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller='myController' ng-keypress="keypress($event)">
-  <div class='calculatorButtons' >
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(7)">7</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(8)">8</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(9)">9</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(4)">4</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(5)">5</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(6)">6</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(1)">1</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(2)">2</button>
-    <button type="button" class="btn btn-primary" ng-click="updateOutput(3)">3</button>
-    <button type="button" class="btn btn-primary" ng-click="subtract()">-</button>
-    <!-- <button type="button" class="btn btn-primary">*</button> -->
-    <!-- <button type="button" class="btn btn-primary">/</button> -->
-    <button type="button" class="btn btn-primary" ng-click="add()">+</button>
-    <button type="button" class="btn btn-primary" ng-click="calculate()">=</button>
-    <button type="button" class="btn btn-primary" ng-click="clear()">Clear</button>
-  </div>
-  <p>{{ output }} {{ count }}</p>
+   <p ng-if='show' class='fx-fade-down fx-speed=800 numbers text-center'>{{ output }}</p>
+  <!-- Dependencies -->
   <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/ng-Fx/dist/ng-Fx.min.js"></script>
+
+  <!-- App Scripts -->
   <script src="app.js"></script>
 </body>
 </html>
