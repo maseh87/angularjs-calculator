@@ -5,8 +5,8 @@
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css-only/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body ng-controller='myController'>
-  <div class='calculatorButtons'>
+<body ng-controller='myController' ng-keypress="keypress($event)">
+  <div class='calculatorButtons' >
     <button type="button" class="btn btn-primary" ng-click="updateOutput(7)">7</button>
     <button type="button" class="btn btn-primary" ng-click="updateOutput(8)">8</button>
     <button type="button" class="btn btn-primary" ng-click="updateOutput(9)">9</button>
@@ -23,7 +23,7 @@
     <button type="button" class="btn btn-primary" ng-click="calculate()">=</button>
     <button type="button" class="btn btn-primary" ng-click="clear()">Clear</button>
   </div>
-  <p>{{ output }}</p>
+  <p>{{ output }} {{ count }}</p>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="app.js"></script>
 </body>
