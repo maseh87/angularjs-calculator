@@ -7,6 +7,7 @@
 </head>
 <body ng-controller='myController' ng-keypress="keypress($event)">
    <p ng-if='show' class='fx-fade-down fx-speed=800 numbers text-center'>{{ output }}</p>
+   <div class='fx-fade-down fx-speed=800' ng-repeat='numbers in nums'>{{ numbers }}</div>
   <!-- Dependencies -->
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>

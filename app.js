@@ -30,6 +30,7 @@ angular.module('myApp', [
       } else {
         $scope.show = true;
         $scope.output += String(btn);
+        $scope.nums.push(btn);
       }
       $scope.pendingValue = toNumber($scope.output);
   };
@@ -102,6 +103,7 @@ angular.module('myApp', [
       setOperationToken();
       $scope.pendingOperation = null;
       $scope.pendingValue = null;
+      console.log($scope.nums);
   };
 
   $scope.clear = function () {
@@ -150,4 +152,5 @@ angular.module('myApp', [
       $scope.clear();
     }
   };
+
 });
