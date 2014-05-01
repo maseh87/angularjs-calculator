@@ -12,22 +12,21 @@
         <div class='calculatorScreen'>
           <p class='numbers text-center'>{{ output }}</p>
         </div>
-        <div class='solarPanel'>Box</div>
         <div class='buttons'>
-          <button class='col-xs-3 btn btn-default btn-sm'>7</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>8</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>9</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>-</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(7)'>7</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(8)'>8</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(9)'>9</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='subtract()'>-</button>
           <br>
-          <button class='col-xs-3 btn btn-default btn-sm'>4</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>5</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>6</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>+</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(4)'>4</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(5)'>5</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(6)'>6</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='add()'>+</button>
           <br>
-          <button class='col-xs-3 btn btn-default btn-sm'>1</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>2</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>3</button>
-          <button class='col-xs-3 btn btn-default btn-sm'>=</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(1)'>1</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(2)'>2</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='updateOutput(3)'>3</button>
+          <button class='col-xs-3 btn btn-default btn-sm' ng-click='calculate()'>=</button>
         </div>
       </div>
     <div class='col-xs-4'>
