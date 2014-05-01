@@ -6,8 +6,24 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller='myController' ng-keypress="keypress($event)">
-   <p ng-if='show' class='fx-fade-down fx-speed=800 numbers text-center'>{{ output }}</p>
-   <div class='fx-fade-down fx-speed=800' ng-repeat='numbers in nums'>{{ numbers }}</div>
+  <div class='col-xs-4'>
+  </div>
+      <div class='calculatorBody col-xs-4'>
+        <div class='calculatorScreen'>
+          <p class='numbers text-center'>{{ output }}</p>
+        </div>
+        <div class='buttons'>
+          <button class='col-xs-4 btn btn-default btn-sm one'>1</button>
+          <button class='col-xs-4 btn btn-default btn-sm'>2</button>
+          <button class='col-xs-4 btn btn-default btn-sm'>3</button>
+        </div>
+      </div>
+    <div class='col-xs-4'>
+    </div>
+
+
+
+
   <!-- Dependencies -->
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
